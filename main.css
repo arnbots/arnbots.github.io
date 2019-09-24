@@ -1,31 +1,45 @@
 html {
     font-size: 16px;
+    height: 100%;
 }
 
 body {
+    height: 100%;
     margin: 0;
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
     background-color: #222;
     color: whitesmoke;
-    background-color: #222;
 }
+
+.main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  max-width: 700px;
+  margin: auto;
+  height: 100%;
+}
+
 header {
+    margin-top: 10px;
     border-top: 4px solid rgba(255, 20, 147, 0.3); 
     background-color: rgba(255, 20, 147, 0.3); 
     font-weight: bold;
     color: hotpink;
     font-size: 2em;
 }
-header h1 {
+header p {
     margin: 0;
-    padding: 10px 0;
+    padding: 40px 0 10px 0;
 }
 
 section a {
+    color: white;
+}
+section a:hover {
     color: #f5ccff;
 }
 
-.padding-lr {
+header, section, footer {
     padding: 0 10px;
 }
 
@@ -38,10 +52,44 @@ h2 {
     font-weight: normal;
 }
 
-nav ul {
-  color: hotpink;
+ul {
+  line-height: 2em;
 }
 nav li {
-  padding: .2em 0;
+  /*padding: .2em 0;*/
 }
+
+table, th, td {
+  border: 1px solid hotpink;
+  border-collapse: collapse;
+}
+
+th {
+  height: 2em;
+  padding: 0.5em;
+}
+
+td {
+  height: 2em;
+  padding: 0.5em;
+}
+
+footer {
+  height: 60px;
+  background-color: rgba(255, 20, 147, 0.3); 
+  border-top: 4px solid rgba(255, 20, 147, 0.3); 
+  border-bottom: 30px solid rgba(255, 20, 147, 0.3); 
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  footer {
+    margin-bottom: 0px;
+    border-bottom: 10px solid rgba(255, 20, 147, 0.3); 
+  }
+  header {
+    margin-top: 0px;
+  }
+}
+
 
